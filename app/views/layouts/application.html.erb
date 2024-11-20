@@ -18,9 +18,8 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
-    </main>
+  <body class="bg-gradient-to-b from-blue-800 to-purple-300">
+    <%= render "layouts/alerts" %>
+    <%= yield %>
   </body>
 </html>
