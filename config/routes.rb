@@ -2,6 +2,14 @@ Rails.application.routes.draw do
   devise_for :users
 
   post "/generate_api_keys", to: "api_keys#generate"
+
+  # /api endpoints
+  namespace :api do
+    namespace :v1 do
+      # /api/v1/chat_messages
+      resources :chat_messages, only: [ :create ]
+    end
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

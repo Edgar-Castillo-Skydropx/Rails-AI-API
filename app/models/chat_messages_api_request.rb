@@ -1,0 +1,2 @@
+class ChatMessagesApiRequest < ApiRequest
+end
